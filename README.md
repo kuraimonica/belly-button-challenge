@@ -21,4 +21,4 @@ I completed the following steps
 
  5. Updated all the plots when a new sample is selected and created a dashboard.
 
-The code is in the static/js folder/
+The code is in the static/js folder/app.js
