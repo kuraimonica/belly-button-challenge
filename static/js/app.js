@@ -7,11 +7,16 @@ function buildMetadata(sample) {
     let otuIds = data.otu_ids;
     let otuLabels = data.otu_labels;
     
+    // to view my data
+    console.log("Sample Values:", sampleValues);
+    console.log("OTU IDs:", otuIds);
+    console.log("OTU Labels:", otuLabels);
     
 
     // Filter the metadata for the object with the desired sample number
     let filteredData = data.metadata.filter(obj => obj.id === sample);
 
+    //console.log("Filtered Data:", filteredData);
     // Use d3 to select the panel with id of `#sample-metadata`
     let panel = d3.select("#sample-metadata");
 
@@ -34,6 +39,9 @@ function buildCharts(sample) {
     // Get the samples field
     var samples = data.samples;
 
+    // View the data
+    console.log("Samples:", samples);
+
     // Filter the samples for the object with the desired sample number
     var sampleData = samples.filter(s => s.id === sample)[0];
 
@@ -41,6 +49,11 @@ function buildCharts(sample) {
     var otuIds = sampleData.otu_ids;
     var otuLabels = sampleData.otu_labels;
     var sampleValues = sampleData.sample_values;
+
+    //View the data
+    console.log("OTU IDs:", otuIds);
+    console.log("OTU Labels:", otuLabels);
+    console.log("Sample Values:", sampleValues);
 
     // Build a Bubble Chart
     var bubbleTrace = {
